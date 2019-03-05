@@ -55,9 +55,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DockWindow.xaml.cs">
+      <DependentUpon>DockWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NormalWindow.xaml.cs">
+      <DependentUpon>NormalWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowLayout.xaml.cs">
       <DependentUpon>WindowLayout.xaml</DependentUpon>
     </Compile>
+    <Page Include="DockWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -70,6 +80,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="NormalWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WindowLayout.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
