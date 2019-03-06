@@ -13,13 +13,21 @@ namespace Nlog.Demo
         private static NLog.Logger logger = LogManager.GetCurrentClassLogger();
         static void Main(string[] args)
         {
+            while (true)
+            {
+                LogFile();
+
+                Console.ReadLine();
+            }
+        }
+
+        static void LogFile()
+        {
             logger.Trace("Trace Message");
             logger.Debug("Debug Message");
             logger.Info("Info Message");
             logger.Error("Error Message");
             logger.Fatal("Fatal Message");
-            //Logger.Default.Debug("123");
-            //Debug.Print("222222222222");
         }
     }
 }
