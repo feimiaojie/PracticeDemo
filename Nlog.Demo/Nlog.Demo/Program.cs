@@ -28,6 +28,7 @@ namespace Nlog.Demo
             logger.Info("Info Message");
             logger.Error("Error Message");
             logger.Fatal("Fatal Message");
+           
         }
     }
 }

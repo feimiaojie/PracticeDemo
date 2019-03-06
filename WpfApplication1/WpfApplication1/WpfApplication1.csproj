@@ -35,6 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework.Aero" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -55,6 +56,35 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+<Compile Include="BorderWindow.xaml.cs">
+      <DependentUpon>BorderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BubbleLabelClick.xaml.cs">
+      <DependentUpon>BubbleLabelClick.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicContent.xaml.cs">
+      <DependentUpon>DynamicContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GridWindow.xaml.cs">
+      <DependentUpon>GridWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SplitterWindow.xaml.cs">
+      <DependentUpon>SplitterWindow.xaml</DependentUpon>
+    </Compile>    <Compile Include="BorderWindow.xaml.cs">
+      <DependentUpon>BorderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BubbleLabelClick.xaml.cs">
+      <DependentUpon>BubbleLabelClick.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicContent.xaml.cs">
+      <DependentUpon>DynamicContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GridWindow.xaml.cs">
+      <DependentUpon>GridWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SplitterWindow.xaml.cs">
+      <DependentUpon>SplitterWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DockWindow.xaml.cs">
       <DependentUpon>DockWindow.xaml</DependentUpon>
     </Compile>
@@ -64,6 +94,22 @@
     <Compile Include="WindowLayout.xaml.cs">
       <DependentUpon>WindowLayout.xaml</DependentUpon>
     </Compile>
+    <Page Include="BorderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BubbleLabelClick.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DynamicContent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GridWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DockWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -80,6 +126,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="SplitterWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="NormalWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

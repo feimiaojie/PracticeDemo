@@ -1,0 +1,29 @@
+﻿<Window x:Class="WpfApplication1.BubbleLabelClick"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        Title="BubbleLabelClick" Height="350" Width="525">
+    <Grid Margin="3">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" HorizontalAlignment="Left" Background="AliceBlue" BorderBrush="Black" BorderThickness="1" MouseDown="SomethingClicked">
+            <StackPanel>
+                <TextBlock Margin="3">Image and text label</TextBlock>
+                <Image Source="C:\Users\Public\Pictures\Sample Pictures\Jellyfish.jpg" Stretch="Fill" Width="100" Height="100" />
+                <TextBlock Margin="3">Courtesy of the StackPanel</TextBlock>
+            </StackPanel>
+        </Label>
+
+        <ListBox Grid.Row="1" Margin="5" Name="lstMessage"/>
+        <CheckBox Grid.Row="2" Margin="5" Name="chkHandle">Handle first event</CheckBox>
+        <Button Grid.Row="3" Margin="5" Padding="3" HorizontalAlignment="Right" Name="cmdClear" Click="cmdClear_Click">Clear List</Button>
+    </Grid>
+</Window>

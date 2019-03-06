@@ -23,5 +23,20 @@ namespace WpfApplication1
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            stackPanel.Orientation = Orientation.Horizontal;
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            btn4.Margin = new Thickness(5);
+        }
+
+        private void btn4_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show($"长：{this.ActualWidth},宽{this.ActualHeight}");
+        }
     }
 }

@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApplication1"
         mc:Ignorable="d"
-        Title="WindowLayout" Height="300" Width="300">
+        Title="WindowLayout" Height="300" Width="300" Loaded="Window_Loaded" SizeToContent="Height">
     <Grid>
-        <WrapPanel>
+        <WrapPanel Height="65" VerticalAlignment="Top">
             <Label x:Name="label" Content="Label"/>
             <TextBox x:Name="textBox" Height="30" TextWrapping="Wrap" Text="TextBox" Width="120" VerticalContentAlignment="Bottom"/>
             <Label x:Name="label1" Content="Label"/>
@@ -15,5 +15,13 @@
             <Label x:Name="label2" Content="Label"/>
             <TextBox x:Name="textBox2" Height="22" TextWrapping="Wrap" Text="TextBox" Width="120" VerticalAlignment="Bottom"/>
         </WrapPanel>
+        <StackPanel  Name="stackPanel" Margin="0,65,0,0" VerticalAlignment="Top" >
+            <Label HorizontalAlignment="Center">A Button Stack</Label>
+            <Button HorizontalAlignment="Left" Content="第一个"/>
+            <Button HorizontalAlignment="Right" Content="第二个"/>
+            <Button Margin="5" Content="第三个"/>
+            <Button Name="btn4" Content="第四个,显示窗口实际大小" Click="btn4_Click"/>
+            <Button Content="第五个，改变排列方式" Click="Button_Click"/>
+        </StackPanel>
     </Grid>
 </Window>
