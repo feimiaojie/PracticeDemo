@@ -18,8 +18,7 @@ namespace Nlog.Demo
             logger.Info("Info Message");
             logger.Error("Error Message");
             logger.Fatal("Fatal Message");
-            //Logger.Default.Debug("123");
-            //Debug.Print("222222222222");
+           
         }
     }
 }
