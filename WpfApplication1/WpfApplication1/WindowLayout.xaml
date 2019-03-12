@@ -20,7 +20,7 @@
             <Button HorizontalAlignment="Left" Content="第一个"/>
             <Button HorizontalAlignment="Right" Content="第二个"/>
             <Button Margin="5" Content="第三个"/>
-            <Button Name="btn4" Content="第四个,显示窗口实际大小" Click="btn4_Click"/>
+            <Button Name="btn4" Content="第四个,显示窗口实际大小" IsDefault="True" Click="btn4_Click"/>
             <Button Content="第五个，改变排列方式" Click="Button_Click"/>
         </StackPanel>
     </Grid>

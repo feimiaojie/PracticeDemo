@@ -38,6 +38,8 @@
     <Reference Include="PresentationFramework.Aero" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -56,11 +58,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-<Compile Include="BorderWindow.xaml.cs">
+    <Compile Include="BindingExpress.xaml.cs">
+      <DependentUpon>BindingExpress.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BorderWindow.xaml.cs">
       <DependentUpon>BorderWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="BubbleLabelClick.xaml.cs">
       <DependentUpon>BubbleLabelClick.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlsWindow.xaml.cs">
+      <DependentUpon>ControlsWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="DynamicContent.xaml.cs">
       <DependentUpon>DynamicContent.xaml</DependentUpon>
@@ -68,32 +76,19 @@
     <Compile Include="GridWindow.xaml.cs">
       <DependentUpon>GridWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SplitterWindow.xaml.cs">
-      <DependentUpon>SplitterWindow.xaml</DependentUpon>
-    </Compile>    <Compile Include="BorderWindow.xaml.cs">
-      <DependentUpon>BorderWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="BubbleLabelClick.xaml.cs">
-      <DependentUpon>BubbleLabelClick.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="DynamicContent.xaml.cs">
-      <DependentUpon>DynamicContent.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="GridWindow.xaml.cs">
-      <DependentUpon>GridWindow.xaml</DependentUpon>
+    <Compile Include="SpecialControl.xaml.cs">
+      <DependentUpon>SpecialControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="SplitterWindow.xaml.cs">
       <DependentUpon>SplitterWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="DockWindow.xaml.cs">
-      <DependentUpon>DockWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="NormalWindow.xaml.cs">
-      <DependentUpon>NormalWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="WindowLayout.xaml.cs">
       <DependentUpon>WindowLayout.xaml</DependentUpon>
     </Compile>
+    <Page Include="BindingExpress.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="BorderWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -102,15 +97,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ControlsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DynamicContent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GridWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="DockWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -126,11 +121,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="SplitterWindow.xaml">
+    <Page Include="SpecialControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="NormalWindow.xaml">
+    <Page Include="SplitterWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -165,6 +160,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Img\5bcecc27227cb2600.jpg_fo710 - 复制.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <SplashScreen Include="Img\5bcecc27227cb2600.jpg_fo710.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
