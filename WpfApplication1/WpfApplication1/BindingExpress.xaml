@@ -9,7 +9,21 @@
     <Grid>
         <StackPanel>
             <Slider Name="sliderFontSize" Margin="3" Minimum="1" Maximum="40" Value="10" TickFrequency="1" TickPlacement="TopLeft"/>
-            <TextBlock Margin="10" Text="Simple Text" Name="lblSampleText" FontSize="{Binding ElementName=sliderFontSize, Path=Value}"/>
+            <TextBlock Margin="10" Text="Simple Text" Name="lblSampleText" FontSize="{Binding ElementName=sliderFontSize, Path=Value, Mode=TwoWay}"/>
+            <Button Content="Set to Small" Click="Button_Click"/>
+            <Button Content="Set to Normal" Click="Button_Click_1"/>
+            <TextBlock Text="{Binding Source={x:Static SystemFonts.IconFontFamily}, Path=Source}" />
+            <TextBlock Text="{Binding Source={x:Static SystemFonts.IconFontFamily}, Path=LineSpacing}" />
+            <TextBlock Text="{Binding Source={x:Static SystemFonts.IconFontFamily}, Path=FamilyTypefaces[0].Style}" />
+            <TextBlock Text="{Binding Source={x:Static SystemFonts.IconFontFamily}, Path=FamilyTypefaces[0].Weight}" />
+            <TextBlock Text="{Binding Path=Title, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}"></TextBlock>
+            <StackPanel DataContext="{x:Static SystemFonts.IconFontFamily}">
+                <TextBlock Text="{Binding  Path=Source}" />
+                <TextBlock Text="{Binding Path=LineSpacing}" />
+                <TextBlock Text="{Binding  Path=FamilyTypefaces[0].Style}" />
+                <TextBlock Text="{Binding  Path=FamilyTypefaces[0].Weight}" />
+            </StackPanel>
         </StackPanel>
+        
     </Grid>
 </Window>
