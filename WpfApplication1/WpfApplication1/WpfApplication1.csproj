@@ -67,9 +67,13 @@
     <Compile Include="BubbleLabelClick.xaml.cs">
       <DependentUpon>BubbleLabelClick.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CommandWindow.xaml.cs">
+      <DependentUpon>CommandWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ControlsWindow.xaml.cs">
       <DependentUpon>ControlsWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataCommands.cs" />
     <Compile Include="DynamicContent.xaml.cs">
       <DependentUpon>DynamicContent.xaml</DependentUpon>
     </Compile>
@@ -97,6 +101,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="BubbleLabelClick.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CommandWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
