@@ -15,16 +15,18 @@ using System.Windows.Shapes;
 namespace WpfApplication1
 {
     /// <summary>
-    /// BindingExpress.xaml 的交互逻辑
+    /// Interaction logic for ResourceWindow.xaml
     /// </summary>
-    public partial class BindingExpress : Window
+    public partial class ResourceWindow : Window
     {
-        public BindingExpress()
+        public ResourceWindow()
         {
             InitializeComponent();
-            BindingExpression binding = txtFontSize.GetBindingExpression(TextBox.TextProperty);
-            binding.UpdateSource();
-            
+        }
+
+        private void UpdateResource_Click(object sender, RoutedEventArgs e)
+        {
+            this.Resources["TileBrush"] = new SolidColorBrush(Colors.LightBlue);
         }
     }
 }

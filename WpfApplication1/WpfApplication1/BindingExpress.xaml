@@ -9,7 +9,11 @@
     <Grid>
         <StackPanel>
             <Slider Name="sliderFontSize" Margin="3" Minimum="1" Maximum="40" Value="10" TickFrequency="1" TickPlacement="TopLeft"/>
-            <TextBlock Margin="10" Text="Simple Text" Name="lblSampleText" FontSize="{Binding ElementName=sliderFontSize, Path=Value}"/>
+            <TextBlock Margin="10" Text="Simple Text" Name="lblSampleText" FontSize="{Binding ElementName=sliderFontSize, Path=Value, Mode=TwoWay}"/>
+            <WrapPanel>
+                <TextBlock>Exact Size:</TextBlock>
+                <TextBox Name="txtFontSize" Text="{Binding ElementName=lblSampleText, Path=FontSize, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="200"></TextBox>
+            </WrapPanel>
         </StackPanel>
     </Grid>
 </Window>

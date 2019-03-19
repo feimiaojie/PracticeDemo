@@ -76,6 +76,9 @@
     <Compile Include="GridWindow.xaml.cs">
       <DependentUpon>GridWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ResourceWindow.xaml.cs">
+      <DependentUpon>ResourceWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SpecialControl.xaml.cs">
       <DependentUpon>SpecialControl.xaml</DependentUpon>
     </Compile>
@@ -121,6 +124,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ResourceWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SpecialControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -165,6 +172,7 @@
     <Content Include="Img\5bcecc27227cb2600.jpg_fo710 - 复制.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Img\c59d980a8ccc82527166d0b54137acac.jpg" />
   </ItemGroup>
   <ItemGroup>
     <SplashScreen Include="Img\5bcecc27227cb2600.jpg_fo710.jpg" />
