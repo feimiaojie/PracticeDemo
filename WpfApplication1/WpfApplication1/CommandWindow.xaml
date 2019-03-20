@@ -40,6 +40,7 @@
                     <StaticResource ResourceKey="binding"></StaticResource>
                 </TextBox.CommandBindings>
             </TextBox>
+            <Label Foreground="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}">ordinary text</Label>
         </StackPanel>
     </Grid>
 </Window>

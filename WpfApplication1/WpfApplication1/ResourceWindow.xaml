@@ -3,12 +3,21 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:local="clr-namespace:WpfApplication1"
         mc:Ignorable="d"
         Title="ResourceWindow" Height="300" Width="300">
     <Window.Resources>
         <ImageBrush x:Key="TileBrush" TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 32 32" ImageSource="Img\c59d980a8ccc82527166d0b54137acac.jpg" Opacity="0.3">
         </ImageBrush>
+        <FontFamily x:Key="ButtonFontFamily">Times New Roman</FontFamily>
+        <sys:Double x:Key="ButtonFontSize">18</sys:Double>
+        <FontWeight x:Key="ButtonFontWeight">Bold</FontWeight>
+        <Style x:Key="BigFontButtonStyle">
+            <Setter Property="Control.FontFamily" Value="Times New Roman" />
+            <Setter Property="Control.FontSize" Value="18" />
+            <Setter Property="Control.FontWeight" Value="Bold" />
+        </Style>
     </Window.Resources>
     <Grid>
         <StackPanel>
@@ -25,6 +34,11 @@
             <Button Background="{StaticResource ResourceKey=TitleBrushDictionary}" Margin="5" Padding="5" FontWeight="Bold" FontSize="14">
                 Resource Dictionary Button
             </Button>
+            <Button Padding="5" Margin="5" Name="cmd" FontFamily="{StaticResource ButtonFontFamily}"
+                    FontWeight="{StaticResource ButtonFontWeight}"
+                    FontSize="{StaticResource ButtonFontSize}">Style Button</Button>
+
+            <Button Style="{StaticResource ResourceKey=BigFontButtonStyle}" Padding="5" Margin="5" Name="cmd2">Style Button2</Button>
         </StackPanel>
     </Grid>
 </Window>
