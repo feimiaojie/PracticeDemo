@@ -89,6 +89,9 @@
     <Compile Include="SplitterWindow.xaml.cs">
       <DependentUpon>SplitterWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowLayout.xaml.cs">
       <DependentUpon>WindowLayout.xaml</DependentUpon>
     </Compile>
@@ -144,6 +147,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WindowLayout.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -184,6 +191,12 @@
   </ItemGroup>
   <ItemGroup>
     <SplashScreen Include="Img\5bcecc27227cb2600.jpg_fo710.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Until\Until.csproj">
+      <Project>{8c54221a-fd0d-4396-a028-7f923dde7857}</Project>
+      <Name>Until</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

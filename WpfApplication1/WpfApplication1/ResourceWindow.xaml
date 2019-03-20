@@ -21,6 +21,10 @@
             </Button>
 
             <Button Name="UpdateResource" Content="Update Resource" Margin="5" Click="UpdateResource_Click"></Button>
+
+            <Button Background="{StaticResource ResourceKey=TitleBrushDictionary}" Margin="5" Padding="5" FontWeight="Bold" FontSize="14">
+                Resource Dictionary Button
+            </Button>
         </StackPanel>
     </Grid>
 </Window>

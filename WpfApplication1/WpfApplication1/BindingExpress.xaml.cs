@@ -22,8 +22,6 @@ namespace WpfApplication1
         public BindingExpress()
         {
             InitializeComponent();
-            BindingExpression binding = txtFontSize.GetBindingExpression(TextBox.TextProperty);
-            binding.UpdateSource();
             
         }
 

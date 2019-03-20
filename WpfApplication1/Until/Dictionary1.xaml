@@ -1,0 +1,6 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--引用别的程序集的文件-->
+    <ImageBrush x:Key="TitleBrushDictionary" TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 32 32" ImageSource="pack://application:,,,/WpfApplication1;component/Img/c59d980a8ccc82527166d0b54137acac.jpg" Opacity="0.3"></ImageBrush>
+    
+</ResourceDictionary>
