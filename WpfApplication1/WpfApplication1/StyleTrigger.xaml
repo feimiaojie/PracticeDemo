@@ -1,0 +1,60 @@
+﻿<Window x:Class="WpfApplication1.StyleTrigger"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        Title="StyleTrigger" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key="BigFontButton">
+            <Style.Setters>
+                <Setter Property="Control.FontFamily" Value="Times New Roman" />
+                <Setter Property="Control.FontSize" Value="18" />
+            </Style.Setters>
+            <Style.Triggers>
+                <!--普通触发器，根据属性变化触发-->
+                <Trigger Property="Control.IsFocused" Value="True" >
+                    <Setter Property="Control.Foreground" Value="Yellow" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="BigFontButtonEvent">
+            <Style.Setters>
+                <Setter Property="Control.FontFamily" Value="Times New Roman" />
+                <Setter Property="Control.FontSize" Value="18" />
+            </Style.Setters>
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="Mouse.MouseEnter" >
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation  Duration="0:0:0.2" Storyboard.TargetProperty="FontSize" To="22"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Mouse.MouseLeave">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:1" Storyboard.TargetProperty="FontSize"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="15"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <WrapPanel>
+            <Button Style="{StaticResource ResourceKey=BigFontButton}" Content="BigFont Button" />
+            <Button >Normal Panel</Button>
+            <Button Style="{StaticResource ResourceKey=BigFontButtonEvent}" Content="BigFont Button (Event Trigger)" />
+
+        </WrapPanel>
+    </Grid>
+</Window>

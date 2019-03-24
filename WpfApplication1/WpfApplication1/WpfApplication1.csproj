@@ -89,6 +89,9 @@
     <Compile Include="SplitterWindow.xaml.cs">
       <DependentUpon>SplitterWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="StyleTrigger.xaml.cs">
+      <DependentUpon>StyleTrigger.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowLayout.xaml.cs">
       <DependentUpon>WindowLayout.xaml</DependentUpon>
     </Compile>
@@ -141,6 +144,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SplitterWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StyleTrigger.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
