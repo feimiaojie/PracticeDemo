@@ -101,13 +101,16 @@
     <Compile Include="ResourceWindow.xaml.cs">
       <DependentUpon>ResourceWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ShapeWindow.xaml.cs">
+      <DependentUpon>ShapeWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SpecialControl.xaml.cs">
       <DependentUpon>SpecialControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="SplitterWindow.xaml.cs">
       <DependentUpon>SplitterWindow.xaml</DependentUpon>
     </Compile>
-	<Compile Include="StyleTrigger.xaml.cs">
+    <Compile Include="StyleTrigger.xaml.cs">
       <DependentUpon>StyleTrigger.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\BothWayBindViewModel.cs" />
@@ -167,6 +170,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ShapeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SpecialControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -175,7 +182,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-	<Page Include="StyleTrigger.xaml">
+    <Page Include="StyleTrigger.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
