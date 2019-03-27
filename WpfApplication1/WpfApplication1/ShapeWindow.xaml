@@ -9,7 +9,7 @@
     <Grid>
         <StackPanel>
             <Ellipse Fill="Yellow" Stroke="Blue" Height="50" Width="100" Margin="5" HorizontalAlignment="Left" />
-            <Rectangle Fill="Yellow" Stroke="Blue" Height="50"  Width="100" Margin="5" HorizontalAlignment="Left" />
+            <Rectangle Fill="Blue" Stroke="Blue" Height="50"  Width="100" Margin="5" HorizontalAlignment="Left" />
         </StackPanel>
     </Grid>
 </Window>
