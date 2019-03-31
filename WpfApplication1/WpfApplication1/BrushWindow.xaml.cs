@@ -21,8 +21,14 @@ namespace WpfApplication1
             DoubleAnimation doubleAnimation = new DoubleAnimation();
             //doubleAnimation.From = 160;
             //doubleAnimation.To = 300;
-            doubleAnimation.To = button.Width + 30;
-            doubleAnimation.Duration = new Duration(TimeSpan.FromSeconds(1));
+            doubleAnimation.To = button.Width + 130;
+            doubleAnimation.Duration = new Duration(TimeSpan.FromSeconds(0.5));
+            //doubleAnimation.DecelerationRatio = 1;
+            //doubleAnimation.FillBehavior = FillBehavior.Stop;
+            doubleAnimation.RepeatBehavior = new RepeatBehavior(2);
+            //doubleAnimation.IsCumulative = true;
+            doubleAnimation.IsAdditive = true;
+
             cmdGrow.BeginAnimation(Button.WidthProperty, doubleAnimation);
         }
     }

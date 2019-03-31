@@ -32,6 +32,7 @@
                 </Button.Effect>
             </Button>
             <Button Name="cmdGrow" Width="160" Click="CmdGrow_Click">Click and Make me Grow</Button>
+            <TextBox Name="txtGrowWidth" Text="{Binding ElementName=cmdGrow, Path=Width}"></TextBox>
         </StackPanel>
     </Grid>
 </Window>
