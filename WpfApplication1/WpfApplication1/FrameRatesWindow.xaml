@@ -1,0 +1,46 @@
+﻿<Window x:Class="WpfApplication1.FrameRatesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        Title="FrameRatesWindow" Height="450" Width="800">
+    
+    <Window.Resources>
+        <BeginStoryboard x:Key="beginStoryboard">
+            <Storyboard Timeline.DesiredFrameRate="{Binding ElementName=rate, Path=Text}">
+                <DoubleAnimation Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(Canvas.Left)" From="0" To="300" Duration="0:0:5" DecelerationRatio="1"></DoubleAnimation>
+                <DoubleAnimation Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(Canvas.Top)" From="300" To="0" Duration="0:0:2.5" DecelerationRatio="1"></DoubleAnimation>
+            </Storyboard>
+        </BeginStoryboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <EventTrigger.Actions>
+                <StaticResource ResourceKey="beginStoryboard" />
+            </EventTrigger.Actions>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="Button.Click" SourceName="btnRepeat">
+            <EventTrigger.Actions>
+                <StaticResource ResourceKey="beginStoryboard" />
+            </EventTrigger.Actions>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Canvas Width="600" ></Canvas>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock>Destied Frame Rate:</TextBlock>
+            <TextBox Name="rate" Width="100" Height="30" Text="60"></TextBox>
+        </StackPanel>
+        <Canvas ClipToBounds="True">
+            <Ellipse Name="ellipse" Fill="Red" Width="10" Height="10"></Ellipse>
+        </Canvas>
+        <Button Grid.Row="2" Width="50" Height="30" Name="btnRepeat">Repeat</Button>
+    </Grid>
+</Window>

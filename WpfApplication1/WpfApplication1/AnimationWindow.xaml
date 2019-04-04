@@ -49,5 +49,19 @@
                 </EventTrigger>
             </ListBox.Triggers>
         </ListBox>
+        <Button Padding="10" Margin="0,10,0,0" Name="cmdGrow3" Height="40" Width="160" Content="Sync Grow">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Click">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Width" To="300" Duration="0:0:0.5" FillBehavior="Stop"></DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetProperty="Height" To="100" Duration="0:0:0.5" FillBehavior="HoldEnd"></DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
     </StackPanel>
 </Window>

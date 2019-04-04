@@ -24,7 +24,7 @@ namespace WpfApplication1
             doubleAnimation.To = button.Width + 130;
             doubleAnimation.Duration = new Duration(TimeSpan.FromSeconds(0.5));
             //doubleAnimation.DecelerationRatio = 1;
-            //doubleAnimation.FillBehavior = FillBehavior.Stop;
+            //doubleAnimation.FillBehavior = FillBehavior.Stop;//动画结束，属性变回去
             doubleAnimation.RepeatBehavior = new RepeatBehavior(2);
             //doubleAnimation.IsCumulative = true;
             doubleAnimation.IsAdditive = true;

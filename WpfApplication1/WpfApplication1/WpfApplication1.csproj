@@ -79,6 +79,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Animation3Window.xaml.cs">
+      <DependentUpon>Animation3Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Animation2Window.xaml.cs">
+      <DependentUpon>Animation2Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Animation4Window.xaml.cs">
+      <DependentUpon>Animation4Window.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AnimationWindow.xaml.cs">
       <DependentUpon>AnimationWindow.xaml</DependentUpon>
     </Compile>
@@ -104,6 +113,9 @@
     <Compile Include="DynamicContent.xaml.cs">
       <DependentUpon>DynamicContent.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FrameRatesWindow.xaml.cs">
+      <DependentUpon>FrameRatesWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GridWindow.xaml.cs">
       <DependentUpon>GridWindow.xaml</DependentUpon>
     </Compile>
@@ -114,6 +126,9 @@
     <Compile Include="ShapeWindow.xaml.cs">
       <DependentUpon>ShapeWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SimpleWindow.xaml.cs">
+      <DependentUpon>SimpleWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SpecialControl.xaml.cs">
       <DependentUpon>SpecialControl.xaml</DependentUpon>
     </Compile>
@@ -122,6 +137,9 @@
     </Compile>
     <Compile Include="StyleTrigger.xaml.cs">
       <DependentUpon>StyleTrigger.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateWindow.xaml.cs">
+      <DependentUpon>TemplateWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\BothWayBindViewModel.cs" />
     <Compile Include="ViewModel\WelcomeViewModel.cs" />
@@ -133,9 +151,24 @@
     <Compile Include="View\WelcomeView.xaml.cs">
       <DependentUpon>WelcomeView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VisualTreeDisplay.xaml.cs">
+      <DependentUpon>VisualTreeDisplay.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowLayout.xaml.cs">
       <DependentUpon>WindowLayout.xaml</DependentUpon>
     </Compile>
+    <Page Include="Animation3Window.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Animation2Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Animation4Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AnimationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -168,6 +201,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="FrameRatesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="GridWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -192,6 +229,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="SimpleWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SpecialControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -204,11 +245,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="TemplateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\BothWayBindView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\WelcomeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VisualTreeDisplay.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -249,6 +298,8 @@
     <Content Include="Img\5bcecc27227cb2600.jpg_fo710 - 复制.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Img\Big.jpg" />
+    <Resource Include="Img\Small.jpg" />
     <Resource Include="Img\wps_office_wpsmain_128px_1134657_easyicon.net.ico" />
     <Resource Include="Img\c59d980a8ccc82527166d0b54137acac.jpg" />
   </ItemGroup>
