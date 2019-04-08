@@ -7,14 +7,45 @@
         mc:Ignorable="d"
         Title="TemplateWindow" Height="450" Width="500">
     <Window.Resources>
-        <ControlTemplate x:Key="ButtonTemplate" TargetType="Button">
-            <Border BorderBrush="Orange" BorderThickness="3" CornerRadius="2" Background="Red" TextBlock.Foreground="White" Margin="10">
+        <ControlTemplate x:Key="ButtonTemplate" TargetType="{x:Type Button}">
+            <Border Name="Border" BorderBrush="Orange" BorderThickness="3" CornerRadius="2" Background="Red" TextBlock.Foreground="White" Margin="10">
+                <Grid>
+                    <Rectangle Name="FocusCue" Visibility="Hidden" Stroke="Black" StrokeThickness="1" StrokeDashArray="1 2"
+                               SnapsToDevicePixels="True"></Rectangle>
                 <ContentPresenter RecognizesAccessKey="True" HorizontalAlignment="Center" Margin="{TemplateBinding Padding}"></ContentPresenter><!--支持例如_M这种ALT+M快捷键访问方式-->
+                </Grid>
             </Border>
             <ControlTemplate.Triggers>
-                <!--<Trigger Property="IsMouseOver" Value="True">
-                    <Setter
-                </Trigger>-->
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="Border" Property="Background" Value="DarkRed" />
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="Border" Property="Background" Value="IndianRed" />
+                    <Setter TargetName="Border" Property="BorderBrush" Value="DarkKhaki" />
+                </Trigger>
+                <Trigger Property="IsKeyboardFocused" Value="True">
+                    <Setter TargetName="FocusCue" Property="Visibility" Value="Visible" />
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter TargetName="Border" Property="TextBlock.Foreground" Value="Gray" />
+                    <Setter TargetName="Border" Property="Background" Value="MistyRose" />
+                </Trigger>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetName="Border" Storyboard.TargetProperty="Background.Color"
+                                            To="Blue" Duration="0:0:1" AutoReverse="True" RepeatBehavior="Forever"></ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetName="Border" Storyboard.TargetProperty="Background.Color"
+                                            Duration="0:0:0.5"></ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
             </ControlTemplate.Triggers>
         </ControlTemplate>
     </Window.Resources>
