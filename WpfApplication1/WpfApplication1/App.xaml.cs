@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using WpfApplication1.ResourceDictionaryF;
 
 namespace WpfApplication1
 {
@@ -26,6 +27,8 @@ namespace WpfApplication1
             {
                 MessageBox.Show(e.Args[0]);
             }
+
+            this.Resources = new CustomDictionary();
         }
     }
 }
