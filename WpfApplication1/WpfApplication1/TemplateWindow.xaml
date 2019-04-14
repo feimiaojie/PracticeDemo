@@ -48,6 +48,19 @@
                 </EventTrigger>
             </ControlTemplate.Triggers>
         </ControlTemplate>
+        <Style TargetType="{x:Type ListBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ListBox}">
+                        <Border Name="Border" BorderThickness="1" CornerRadius="3">
+                            <ScrollViewer Focusable="False">
+                                <ItemsPresenter Margin="2"></ItemsPresenter>
+                            </ScrollViewer>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <StackPanel>
         <Button Template="{StaticResource ButtonTemplate}" Padding="1">A Simple Button with a Custom Template</Button>

@@ -5,8 +5,25 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WpfCustomControlLibrary"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800" Name="colorPicker">
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Slider Name="sliderRed" Minimum="0" Maximum="255" Value="{Binding ElementName=colorPicker,Path=Red}" />
+        <Slider Name="sliderGreen" Grid.Row="1" Minimum="0" Maximum="255" Value="{Binding ElementName=colorPicker,Path=Green}" />
+        <Slider Name="sliderBlue" Grid.Row="2" Minimum="0" Maximum="255" Value="{Binding ElementName=colorPicker,Path=Blue}" />
+
+        <Rectangle Grid.Column="1" Grid.RowSpan="3" Width="50" Stroke="Black" StrokeThickness="1">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="{Binding ElementName=colorPicker, Path=Color}" ></SolidColorBrush>
+            </Rectangle.Fill>
+        </Rectangle>
     </Grid>
 </UserControl>

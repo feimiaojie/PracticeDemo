@@ -141,6 +141,9 @@
     <Compile Include="TemplateWindow.xaml.cs">
       <DependentUpon>TemplateWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UseCustomControl.xaml.cs">
+      <DependentUpon>UseCustomControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\BothWayBindViewModel.cs" />
     <Compile Include="ViewModel\WelcomeViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
@@ -256,6 +259,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UseCustomControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\BothWayBindView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -317,6 +324,10 @@
     <ProjectReference Include="..\Until\Until.csproj">
       <Project>{8c54221a-fd0d-4396-a028-7f923dde7857}</Project>
       <Name>Until</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WpfCustomControlLibrary\WpfCustomControlLibrary.csproj">
+      <Project>{fae94892-f020-4679-a09f-45c9bfc9ad5f}</Project>
+      <Name>WpfCustomControlLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

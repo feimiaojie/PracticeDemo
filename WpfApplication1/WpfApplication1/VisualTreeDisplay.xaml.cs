@@ -52,5 +52,6 @@ namespace WpfApplication1
                 ProcessElement(VisualTreeHelper.GetChild(element, i), item);
             }
         }
+
     }
 }
