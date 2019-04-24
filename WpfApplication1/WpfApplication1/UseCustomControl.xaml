@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApplication1"
           xmlns:lib="clr-namespace:WpfCustomControlLibrary;assembly=WpfCustomControlLibrary"
         mc:Ignorable="d"
-        Title="UseCustomControl" Height="450" Width="800">
+        Title="UseCustomControl" Height="450" Width="400">
     <StackPanel>
         <lib:ColorPicker Name="colorPicker"  Color="Aqua" ColorChanged="colorPicker_ColorChanged"></lib:ColorPicker>
 

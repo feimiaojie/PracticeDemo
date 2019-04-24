@@ -91,6 +91,9 @@
     <Compile Include="AnimationWindow.xaml.cs">
       <DependentUpon>AnimationWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BindData.xaml.cs">
+      <DependentUpon>BindData.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BindingExpress.xaml.cs">
       <DependentUpon>BindingExpress.xaml</DependentUpon>
     </Compile>
@@ -110,6 +113,8 @@
       <DependentUpon>ControlsWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="DataCommands.cs" />
+    <Compile Include="DB\Product.cs" />
+    <Compile Include="DB\StoreDB.cs" />
     <Compile Include="DynamicContent.xaml.cs">
       <DependentUpon>DynamicContent.xaml</DependentUpon>
     </Compile>
@@ -173,6 +178,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AnimationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BindData.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
