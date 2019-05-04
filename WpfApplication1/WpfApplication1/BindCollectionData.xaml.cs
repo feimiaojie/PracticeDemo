@@ -31,5 +31,10 @@ namespace WpfApplication1
             products = new ObservableCollection<Product>(StoreDB.GetProducts());
             lstProducts.ItemsSource = products;
         }
+
+        private void Button_Delete(object sender, RoutedEventArgs e)
+        {
+            products.Remove((Product)lstProducts.SelectedItem);
+        }
     }
 }
