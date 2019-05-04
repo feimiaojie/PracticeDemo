@@ -91,6 +91,9 @@
     <Compile Include="AnimationWindow.xaml.cs">
       <DependentUpon>AnimationWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BindCollectionData.xaml.cs">
+      <DependentUpon>BindCollectionData.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BindData.xaml.cs">
       <DependentUpon>BindData.xaml</DependentUpon>
     </Compile>
@@ -178,6 +181,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AnimationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BindCollectionData.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -327,7 +334,7 @@
     <Resource Include="Img\c59d980a8ccc82527166d0b54137acac.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <SplashScreen Include="Img\5bcecc27227cb2600.jpg_fo710.jpg" />
+    <None Include="Img\5bcecc27227cb2600.jpg_fo710.jpg" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Until\Until.csproj">

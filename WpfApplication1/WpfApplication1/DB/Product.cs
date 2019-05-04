@@ -11,7 +11,13 @@ namespace WpfApplication1.DB
     {
         public string ModelNumber { get; set; }
 
-        public string ModelName { get; set; }
+        private string modelName;
+        public string ModelName { get => modelName;
+            set {
+                modelName = value;
+                OnPropertyChanged(new PropertyChangedEventArgs("ModelName"));
+            }
+        }
 
         private decimal unitCost;
         public decimal UnitCost { get => unitCost;
@@ -25,7 +31,7 @@ namespace WpfApplication1.DB
         public Product(string modelNumber, string modelName, decimal unitCost, string description)
         {
             ModelNumber = modelNumber;
-            ModelName = ModelName;
+            ModelName = modelName;
             UnitCost = unitCost;
             Description = description;
         }
