@@ -22,8 +22,15 @@ namespace WpfApplication1.DB
         private decimal unitCost;
         public decimal UnitCost { get => unitCost;
             set {
-                unitCost = value;
-                OnPropertyChanged(new PropertyChangedEventArgs("UnitCost"));
+                if (value < 0)
+                {
+                    throw new ArgumentException("UnitCost cannot be negative.");
+                }
+                else
+                {
+                    unitCost = value;
+                    OnPropertyChanged(new PropertyChangedEventArgs("UnitCost"));
+                }
             } }
 
         public string Description { get; set; }
