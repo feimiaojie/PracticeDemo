@@ -1,0 +1,40 @@
+﻿<Window x:Class="WpfApplication1.DataGridWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Luna"
+        mc:Ignorable="d"
+        Title="DataGridWindow" Height="450" Width="800">
+   
+    <Grid>
+
+        <DataGrid Name="dataGrid1"  ItemsSource="{Binding TempDatas}" AutoGenerateColumns="False" SelectionMode="Extended" RowDetailsVisibilityMode="Collapsed"
+				  CanUserAddRows="False" IsReadOnly="True" Loaded="DataGrid1_Loaded" ScrollViewer.ScrollChanged="DataGrid1_ScrollChanged">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn  Width="Auto" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Expander ExpandDirection="Up" Expanded="Expander_Expanded" Collapsed="Expander_Collapsed"/>
+                            <!--<Image Width="15" Height="15" Source="{Binding imageIndex}" HorizontalAlignment="Center" ></Image>-->
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="上清" Width="170" Binding="{Binding Key}"></DataGridTextColumn>
+                <DataGridTextColumn Header="123)" Width="170" Binding="{Binding Value}"></DataGridTextColumn>
+
+            </DataGrid.Columns>
+            <DataGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <DataGrid IsReadOnly="True"  Name="dataGrid2" ItemsSource="{Binding Details}"  ScrollViewer.CanContentScroll="True"  CanUserAddRows="False" SelectionUnit="FullRow" AutoGenerateColumns="False" CanUserResizeRows="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="d上清" Width="170" Binding="{Binding AA}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="d上清2" Width="170" Binding="{Binding BB}"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DataTemplate>
+            </DataGrid.RowDetailsTemplate>
+        </DataGrid>
+    </Grid>
+</Window>

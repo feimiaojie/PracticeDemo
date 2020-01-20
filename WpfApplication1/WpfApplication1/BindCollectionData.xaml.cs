@@ -24,17 +24,26 @@ namespace WpfApplication1
         public BindCollectionData()
         {
             InitializeComponent();
+            dtPicker.Text = "2019/8/12";
         }
         private ObservableCollection<Product> products;
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             products = new ObservableCollection<Product>(StoreDB.GetProducts());
             lstProducts.ItemsSource = products;
+            var a = CollectionViewSource.GetDefaultView(lstProducts.ItemsSource);
+
+            
         }
 
         private void Button_Delete(object sender, RoutedEventArgs e)
         {
             products.Remove((Product)lstProducts.SelectedItem);
+        }
+
+        private void LstProducts_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 }

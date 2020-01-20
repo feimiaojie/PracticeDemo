@@ -45,6 +45,8 @@ namespace WpfApplication1.ViewModel
 
             SimpleIoc.Default.Register<WelcomeViewModel>();
             SimpleIoc.Default.Register<BothWayBindViewModel>();
+            SimpleIoc.Default.Register<MessageViewModelReceive>();
+            SimpleIoc.Default.Register<MessageViewModelSend>();
         }
 
         public WelcomeViewModel Welcome
@@ -60,6 +62,22 @@ namespace WpfApplication1.ViewModel
             get
             {
                 return ServiceLocator.Current.GetInstance<BothWayBindViewModel>();
+            }
+        }
+
+        public MessageViewModelSend MessageModelSend
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<MessageViewModelSend>();
+            }
+        }
+
+        public MessageViewModelReceive MessageModelReceive
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<MessageViewModelReceive>();
             }
         }
         public static void Cleanup()

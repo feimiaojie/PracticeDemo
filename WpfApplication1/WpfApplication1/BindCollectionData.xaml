@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfApplication1"
+        xmlns:local="clr-namespace:WpfApplication1" 
         mc:Ignorable="d"
         Title="BindCollectionData" Height="650" Width="500">
     <Grid>
@@ -12,7 +12,7 @@
             <RowDefinition Height="40"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <ListView Name="lstProducts" HorizontalAlignment="Stretch" Background="Gainsboro">
+        <ListView Name="lstProducts" HorizontalAlignment="Stretch" Background="Gainsboro" MouseDoubleClick="LstProducts_MouseDoubleClick">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="ModelName" DisplayMemberBinding="{Binding ModelName}"/>
@@ -31,10 +31,11 @@
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="120"></ColumnDefinition>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="53*"/>
+                <ColumnDefinition Width="319*"/>
             </Grid.ColumnDefinitions>
             <TextBlock Margin="10,16,10,15" VerticalAlignment="Center">Model Number:</TextBlock>
-            <TextBox Grid.Column="1" Margin="10" Grid.ColumnSpan="2" Text="{Binding ModelNumber}"/>
+            <TextBox Grid.Column="1" Margin="10" Grid.ColumnSpan="2" Text="{Binding ModelNumber, Mode=TwoWay}"/>
 
             <TextBlock Grid.Row="1" Margin="10,16,10,15" VerticalAlignment="Center">Model Name:</TextBlock>
             <TextBox Grid.Row="1" Grid.Column="1" Margin="10" Grid.ColumnSpan="2" Text="{Binding ModelName}"/>
@@ -51,6 +52,7 @@
             </TextBox>
 
             <TextBlock Grid.Row="3" Margin="10,16,10,15" VerticalAlignment="Center">Description:</TextBlock>
+            <DatePicker Grid.Row="3" Grid.Column="2" Name="dtPicker"/>
             <TextBox Grid.Row="4" Grid.ColumnSpan="3" Margin="10" Text="{Binding Description}"></TextBox>
 
         </Grid>

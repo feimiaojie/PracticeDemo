@@ -29,6 +29,12 @@ namespace WpfApplication1
             }
 
             this.Resources = new CustomDictionary();
+
+        }
+
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            StartupUri = new Uri("DataGridWindow.xaml", UriKind.Relative);
         }
     }
 }
