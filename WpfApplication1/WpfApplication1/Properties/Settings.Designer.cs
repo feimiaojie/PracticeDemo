@@ -26,7 +26,7 @@ namespace WpfApplication1.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=abelTestDB;Integrated Security" +
-            "=True;Pooling=False")]
+            "=True;Pooling=False;MultipleActiveResultSets=true")]
         public string StoreDatabase {
             get {
                 return ((string)(this["StoreDatabase"]));

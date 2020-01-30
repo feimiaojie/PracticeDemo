@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Navigation;
 using WpfApplication1.ResourceDictionaryF;
 
 namespace WpfApplication1
@@ -29,12 +31,20 @@ namespace WpfApplication1
             }
 
             this.Resources = new CustomDictionary();
-
         }
 
         protected override void OnStartup(StartupEventArgs e)
         {
-            StartupUri = new Uri("DataGridWindow.xaml", UriKind.Relative);
+            StartupUri = new Uri("PageFolder/Page1.xaml", UriKind.Relative);
+        }
+
+        private void App_OnNavigationFailed(object sender, NavigationFailedEventArgs e)
+        {
+            if (e.Exception is WebException)
+            {
+                MessageBox.Show("Website" + e.Uri.ToString() + " cannot be reached");
+                e.Handled = true;
+            }
         }
     }
 }

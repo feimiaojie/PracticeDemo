@@ -134,6 +134,7 @@
     <Compile Include="DataGridWindow.xaml.cs">
       <DependentUpon>DataGridWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DB\Category.cs" />
     <Compile Include="DB\Product.cs" />
     <Compile Include="DB\StoreDB.cs" />
     <Compile Include="DynamicContent.xaml.cs">
@@ -146,6 +147,16 @@
       <DependentUpon>GridWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\UserInfoModel.cs" />
+    <Compile Include="ModernWindow.xaml.cs">
+      <DependentUpon>ModernWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageFolder\Page1.xaml.cs">
+      <DependentUpon>Page1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageFolder\Page2.xaml.cs">
+      <DependentUpon>Page2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="ResourceWindow.xaml.cs">
       <DependentUpon>ResourceWindow.xaml</DependentUpon>
     </Compile>
@@ -280,6 +291,18 @@
     <Compile Include="ResourceDictionaryF\CustomDictionary.xaml.cs">
       <DependentUpon>CustomDictionary.xaml</DependentUpon>
     </Compile>
+    <Page Include="ModernWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageFolder\Page1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageFolder\Page2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ResourceDictionaryF\CustomDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
